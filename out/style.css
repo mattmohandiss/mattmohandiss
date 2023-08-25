@@ -1,0 +1,40 @@
+body { /* Global */
+    color: Black;
+    background: White;
+    font: 12pt "Helvetica";
+    line-height: 1.25em;
+    margin: 1em;
+}
+
+table { /* Contact */
+    font-size: 1em;
+    font-weight: bold;
+    empty-cells: hide;
+    width: 100%;
+    border-spacing: 1em;
+}
+
+h1 { /* Name */
+    font-size: 4em;
+    text-align: center;
+}
+
+h2 { /* Section */
+    font-size: 2.25em;
+}
+
+h3 { /* Entry */
+    font-size: 1.25em;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+h4 { /* Date */
+    font-size: 1.25em;
+    display: inline;
+    margin: 0;
+    padding 0;
+    float: right;
+    text-align: right;
+}
