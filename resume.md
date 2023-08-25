@@ -11,10 +11,10 @@ page-size: Letter
 
 # Matt Mohandiss
 
-|                         |                               |
-| :---                    | :---:                         | ---:
-| Durham, NC              | mattmohandiss@gmail.com       | 678-767-2886 
-| mattmohandiss.com       | linkedin.com/in/mattmohandiss | github.com/mars3725
+|                        |                               |                     |
+|:-----------------------|:-----------------------------:|--------------------:|
+| Durham, North Carolina | mattmohandiss@gmail.com       | 678-767-2886        |
+| mattmohandiss.com      | linkedin.com/in/mattmohandiss | github.com/mars3725 |
 
 ---
 
