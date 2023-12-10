@@ -1,7 +1,7 @@
 name: 'Convert to HTML and PDF'
 on: push
 permissions:
-  contents: read|write
+  contents: read
 jobs:
   convert:
     runs-on: ubuntu-latest
@@ -13,22 +13,18 @@ jobs:
         with:
           args: >-
             resume.md
-            -c style.css
-            -s 
-            --template template.html
-            -o output/resume.html
+            -d defaults.yml
+            -o resume.html
       - name: Convert PDF
         uses: docker://pandoc/core:latest
         with:
           args: >-
             resume.md
-            -c style.css
-            -s
-            --template template.html
+            -d defaults.yml
             -t html
-            -o output/resume.pdf
+            -o resume.pdf
       - name: Create Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: output
-          path: output
+          name: resume
+          path: resume.*
