@@ -1,32 +1,37 @@
 body { /* Global */
-    color: Black;
+    font: 12pt "Cantarell";
+    line-height: 1.5em;
+    text-align: justify;
     background: White;
-    font: 12pt "Helvetica";
-    line-height: 1.25em;
+    color: Black;
     margin: 1em;
 }
 
 table { /* Contact */
     font-size: 1em;
-    font-weight: bold;
+    line-height: 1em;
     empty-cells: hide;
     width: 100%;
-    border-spacing: 1em;
+    border-spacing: 0.75em;
 }
 
 h1 { /* Name */
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
+    margin-top: 0;
 }
 
 h2 { /* Section */
-    font-size: 2.25em;
+    font-size: 1.6em;
+    margin: 0.5em 0 !important;
 }
 
 h3 { /* Entry */
     font-size: 1.25em;
     display: inline;
     margin: 0;
+    margin-top: 1em;
+    margin-left: 1em;
     padding: 0;
 }
 
@@ -34,7 +39,20 @@ h4 { /* Date */
     font-size: 1.25em;
     display: inline;
     margin: 0;
+    margin-top: 0em;
+    margin-right: 1em;
     padding 0;
     float: right;
     text-align: right;
+}
+
+ul { /* Bulleted Blocks */
+    margin: 0.5em;
+}
+
+li { /* Bulleted Text */
+    margin-bottom: 0.25em;
+}
+a { /* Hyperlinks */
+    all: unset;
 }
