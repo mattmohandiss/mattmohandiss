@@ -1,0 +1,34 @@
+name: 'Convert to HTML and PDF'
+on: push
+permissions:
+  contents: read|write
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Convert HTML
+        uses: docker://pandoc/core:latest
+        with:
+          args: >-
+            resume.md
+            -c style.css
+            -s 
+            --template template.html
+            -o output/resume.html
+      - name: Convert PDF
+        uses: docker://pandoc/core:latest
+        with:
+          args: >-
+            resume.md
+            -c style.css
+            -s
+            --template template.html
+            -t html
+            -o output/resume.pdf
+      - name: Create Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: output
