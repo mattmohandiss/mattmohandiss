@@ -1,14 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <meta name="author" content='${author-meta}'>
-    <meta name="date" content='${date-meta}'>
-    <link rel="stylesheet" href="${css}" />
-    <title>${title}</title>
-  </head>
-  <body>
-    ${body}
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="style.css"/>
+		<meta name="author" content="{{ index (index . 0).Attributes "👤"  }}"/>
+		<title>{{ index (index . 0).Attributes "👤"  }}'s Resume'"</title>
+	</head>
+	<body>
+		<header>
+			<h1> {{ index (index . 0).Attributes "👤" }} </h1>
+		</header>
+		<main>
+			{{ range (slice . 1) }}
+				<section>
+					<h2> {{ .Title }} </h2>
+					{{ range (.Entries) }}
+						<article>
+							{{ if .Title}}
+								<h3>
+									<span> {{ .Title }} </span>
+									<span> {{ index .Attributes "⌛" }} </span>
+								</h3>
+							{{ end }}
+							<ul>
+								{{ range (.Entries) }}
+									<li> {{ . }} </li>
+								{{ end }}
+							</ul>
+						</article>
+					{{ end }}
+				</section>
+			{{ end }}
+		</main>
+	</body>
 </html>

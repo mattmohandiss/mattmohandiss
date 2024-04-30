@@ -6,35 +6,36 @@ import (
 	"strings"
 	"regexp"
 	"fmt"
+	"html/template"
 )
 
 type Section[T interface{}] struct {
-	title string
-	attributes map[string]string
-	entries []T
+	Title string
+	Attributes map[string]string
+	Entries []T
 }
 
 func printTree(sections []Section[Section[string]]) {
 	for _, section := range sections {
-		fmt.Println(section.title)
-		for key, val := range section.attributes {
+		fmt.Println(section.Title)
+		for key, val := range section.Attributes {
 			fmt.Println("\t"+key+" "+val)
 		}
 
-		for _, entry := range section.entries {
-			if (entry.title != "") {
-				fmt.Println("\t"+entry.title)
-				for key, val := range entry.attributes {
+		for _, entry := range section.Entries {
+			if (entry.Title != "") {
+				fmt.Println("\t"+entry.Title)
+				for key, val := range entry.Attributes {
 					fmt.Println("\t\t"+key+" "+val)
 				}
-				for _, detail := range entry.entries {
+				for _, detail := range entry.Entries {
 					fmt.Println("\t\t* "+detail[0:55]+"...")
 				}
 			} else {
-				for key, val := range entry.attributes {
+				for key, val := range entry.Attributes {
 					fmt.Println("\t"+key+" "+val)
 				}
-				for _, detail := range entry.entries {
+				for _, detail := range entry.Entries {
 					fmt.Println("\t* "+detail[0:55]+"...")
 				}
 			}
@@ -63,20 +64,20 @@ func main() {
 		switch pre {
 			case "##":
 				sections = append(sections, Section[Section[string]]{
-					title: val,
+					Title: val,
 				})
 				break
 
 			case "###":
 				section := &sections[len(sections)-1]
 
-				if (section.entries == nil) {
-					section.entries = []Section[string]{Section[string]{
-						title: val,
+				if (section.Entries == nil) {
+					section.Entries = []Section[string]{Section[string]{
+						Title: val,
 					}}
 				} else {
-					section.entries = append(section.entries, Section[string]{
-						title: val,
+					section.Entries = append(section.Entries, Section[string]{
+						Title: val,
 					})
 				}
 				break
@@ -84,13 +85,13 @@ func main() {
 			case "*":
 				section := &sections[len(sections)-1]
 
-				if (section.entries == nil) {
-					section.entries = []Section[string]{Section[string]{
-						entries: []string{val},
+				if (section.Entries == nil) {
+					section.Entries = []Section[string]{Section[string]{
+						Entries: []string{val},
 					}}
 				} else {
-					entry := &section.entries[len(section.entries)-1]
-					entry.entries = append(entry.entries, val)
+					entry := &section.Entries[len(section.Entries)-1]
+					entry.Entries = append(entry.Entries, val)
 				}
 				break
 
@@ -101,22 +102,22 @@ func main() {
 				if (len(attr) == 2) {
 					section := &sections[len(sections)-1]
 
-					if (section.entries == nil) {
-						if (section.attributes == nil) {
-							 section.attributes = map[string]string{
+					if (section.Entries == nil) {
+						if (section.Attributes == nil) {
+							 section.Attributes = map[string]string{
 							 	attr[0]: attr[1],
 							 }
 						} else {
-							section.attributes[attr[0]] = attr[1]
+							section.Attributes[attr[0]] = attr[1]
 						}
 					} else {
-						entry := &section.entries[len(section.entries)-1]
-						if (entry.attributes == nil) {
-							 entry.attributes = map[string]string{
+						entry := &section.Entries[len(section.Entries)-1]
+						if (entry.Attributes == nil) {
+							 entry.Attributes = map[string]string{
 							 	attr[0]: attr[1],
 							 }
 						} else {
-							entry.attributes[attr[0]] = attr[1]
+							entry.Attributes[attr[0]] = attr[1]
 						}
 					}
 				}
@@ -124,5 +125,17 @@ func main() {
 		}
 	}
 
-	printTree(sections)
+	// printTree(sections)
+
+	template, err := template.ParseFiles("template.html")
+	if err != nil { log.Fatal(err) }
+
+	file, err := os.Create("resume.html")
+	if err != nil { log.Fatal(err) }
+
+	err = template.Execute(file, sections)
+	if err != nil { log.Fatal(err) }
+
+	err = file.Close()
+	if err != nil { log.Fatal(err) }
 }
