@@ -1,0 +1,80 @@
+/* Structures */
+
+html {
+    background: linear-gradient(to bottom, cornflowerBlue 0%, RebeccaPurple 100%);
+    filter: drop-shadow(3px 5px 8px Gray);
+    font: calc(12px + 5vw) "Courier New";
+    color: Ivory;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0 1.5em;
+}
+
+header {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Headings */
+
+h1 {
+	font-size: 10vw;
+}
+
+h2 {
+	font-size: 0.75em;
+	text-align: center;
+}
+
+/* Elements */
+
+div {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+p {
+	font-size: 0.5em;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  display: flex;
+}
+
+a > svg {
+    width: 1em;
+	justify-content: center;
+}
+
+/* Classes */
+
+.profile {
+	float: left;
+	width: 8em;
+	margin-right: 1em;
+	border-radius: 50%;
+}
+
+/* Ids */
+
+#right {
+	color: Turquoise;
+}
+
+#links {
+	margin-top: auto;
+	padding-bottom: 2em;
+}
