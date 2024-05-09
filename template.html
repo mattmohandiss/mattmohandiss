@@ -5,11 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="style.css"/>
 		<meta name="author" content="{{ index (index . 0).Attributes "👤"  }}"/>
-		<title>{{ index (index . 0).Attributes "👤"  }}'s Resume'"</title>
+		<title> {{ index (index . 0).Attributes "👤"  }}'s Resume </title>
 	</head>
 	<body>
 		<header>
 			<h1> {{ index (index . 0).Attributes "👤" }} </h1>
+			<div>
+			{{ range $key, $val := (index . 0).Attributes }}
+				{{ if (ne $key "👤") }}
+					<span>{{ $key }} {{ $val }}</span>
+				{{ end }}
+			{{ end }}
+			</div>
 		</header>
 		<main>
 			{{ range (slice . 1) }}

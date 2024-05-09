@@ -5,23 +5,24 @@
 
 ## EXPERIENCE
 
-### Software Developer, SAS
+### Devops Engineer, SAS
 [//]: # (⌛ Jun 2022 - Present)
-* Led an investigation into migrating Selenium web tests to Playwright and sold management on a new testing strategy that achieved above 80% code coverage. Provided a robust system for parameterizing tests based on 25+ input criteria resulting in increased QA effectiveness.
-* Facilitated third-party penetration tests of a large multi-tenant web application and related infrastructure. Assessed vulnerability findings and created hotfixes for SEV 2 and SEV 3 incidents resulting in 99.999% uptime.
-* Assisted with a complete migration of on-premises infrastructure to Azure Cloud and provisioned virtual machines for 30+ developers. Automated software installation on machines using Azure managed applications resulting in a quicker developer onboarding backed by infrastructure as code.
-* Shifted datastores for 14 statewide clients with a combined 500,000 active users to a NIST compliant cloud environment. Modified ETL process to support pulling data from external APIs in addition to FTP resulting in ~5x faster data collection.
+* Migrating on-premises infrastructure to Microsoft Azure, provisioning virtual machines, and automating software deployment with Terraform resulting in a streamlined ops workflow for 30+ developers.
+* Conducting security and stress tests of a multi-tenant web application with 500,000 active users, implementing dependency verification, and resolving incidents resulting in 99.999% uptime.
+* Improving functional testing suite by utilizing schema driven design to parameterize tests per user role resulting in 90% code coverage and a streamlined QA workflow.
+* Managing data storage for 14 statewide clients in a NIST compliant cloud environment by modifying ETL external data pull process resulting in 2x faster data ingress and improved security.
 
-### Software Developer Intern, Virginia Systems and Technology
+### Software Engineer, Virginia Systems and Technology
 [//]: # (⌛ Jan 2019 - Aug 2020)
-* Developed geospatial monitoring software for federal defense applications resulting in an improved ability for field operatives to identify and analyze threats.
-* Contributed to Elasticsearch and Kibana open source projects and worked with Elastic engineers to craft custom solutions that resulted in 2x faster data refresh rates on the monitoring dashboard.
-* Redesigned a dashboard using custom Kibana charts to support live geospatial data visualizations in AngularJS.
+* Created geospatial tracking software in React for national defense agencies resulting in an improved ability for analysts to identify incoming threats.
+* Improved live data ingestion pipeline using Elasticsearch by contributing to Elasticsearch open source projects resulting in 50ms faster data refresh rates.
+* Impelemeted LSTM neural networks in Python and C++ to assist in automatic detection of time series anomalies resulting in a 20% reduction in detection errors.
 
 ### Software Developer Intern, Cobb County School District
 [//]: # (⌛ Aug 2016 - Dec 2016)
-* Designed internal and external websites used by ~7300 teachers in 110 schools across the district. Automated the update process by creating a web form that generated html files from templates and queued them for webmaster approval resulting in 10x faster update times.
-* Developed an iOS native behavior tracking application for special education teachers to replace written reports. Integrated charts and data exports leading to a 2x increase in the number of monitored behaviors.
+* Published internal and external websites for +7500 educators resulting in a unified user experience across all 110 schools in the district.
+* Created an autopopulated web form to generate HTML/JS from templates and queue them for webmaster approval resulting in 10x faster webpage update times.
+* Developed an mobile behavior tracking application in Swift and Java for special education departments to replace written reports. Integrated charts and data exports leading to a 40% increase in the number of monitored behaviors.
 
 &nbsp;
 
@@ -29,13 +30,14 @@
 
 ### BS Computer Science, University of Tennessee
 [//]: # (⌛ Aug 2017 - May 2023)
-* Double minor in Cybersecurity and Business Administration.
-* Represented the CS department to ~120 employers as an ambassador in the Office of Engineering Professional Practice. Prepared students for technical interviews and ultimately helped place 50+ students into internship roles.
+* Double minored in Cybersecurity and Business Administration.
+* Member of the Machine Learning Club, Theta Tau Professional Engineering Fraternity, Hack4Impact, and Best Buddies International
+* Placed 2nd in the VolHacks hackathon with DormBell, a cross-platform mobile app written in Flutter.
+* Worked in the Office of Engineering Professional Practice as a student ambassador representing the CS department to 120 employers and prepared students for technical interviews resulting in placing 73 students into software enginnering internships.
 
 &nbsp;
 
-## PROJECTS
-
-* Configured a bare-metal arch linux system using LUKS encryption, Systemd, and Zsh on a Btrfs filesystem. Authored multiple shell utilities resulting in a streamlined and customized development workflow. Learned about networking, kernel submodule development, and linux system administration.
-* Developed cross platform mobile applications for small businesses using Flutter. Met with clients to gather requirements and completed development milestones resulting in delivery of finished applications on time and in scope. Learned about prototyping, project management, and Material UI development.
-* Created cross platform 2D games using Lua. Learned to write performant code utilizing knowledge of data structures and algorithms.
+## SKILLS
+* **Languages**: Python, Typescript, Dart, Lua, C, Go
+* **Technologies**: Git, React, Elasticsearch, Terraform
+* **Platforms**: Linux, Web, iOS, Android, Microsoft Azure, Google Cloud

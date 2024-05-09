@@ -2,11 +2,23 @@ body {
 	font: 12pt "Cantarell";
 	background: White;
 	color: Black;
-	margin: 2em;
+	margin: 0.5in;
+}
+
+header {
+	text-align: center;
+	margin: 0 0 1em 0;
+}
+
+header > div {
+	margin: 1em 0 0 0;
+	display: inline-flex;
+	justify-content: space-evenly;
+	width: 100%;
 }
 
 section {
-	/* margin: 0 0 0 0; */
+	margin: 0;
 }
 
 article {
@@ -15,7 +27,6 @@ article {
 
 h1 {
 	margin: 0;
-	text-align: center;
 }
 
 h2 {
@@ -35,7 +46,7 @@ ul {
 }
 
 li {
-	margin: 0;
+	margin: 0 0 0.25em 0;
 	text-align: justify;
 }
 
