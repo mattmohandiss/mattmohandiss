@@ -49,9 +49,13 @@ p {
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
-  display: flex;
+	color: inherit;
+	text-decoration: inherit;
+	display: flex;
+}
+
+a:hover {
+	filter: brightness(80%);
 }
 
 a > svg {
