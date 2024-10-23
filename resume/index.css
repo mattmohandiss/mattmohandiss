@@ -10,7 +10,7 @@ header {
 	margin: 0 0 1em 0;
 }
 
-header > div {
+header>div {
 	margin: 1em 0 0 0;
 	display: inline-flex;
 	justify-content: space-evenly;
@@ -47,9 +47,9 @@ ul {
 
 li {
 	margin: 0 0 0.25em 0;
-	text-align: justify;
+	text-align: left;
 }
 
 a {
-    all: unset;
+	all: unset;
 }
