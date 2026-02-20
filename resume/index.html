@@ -4,98 +4,158 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Matt Mohandiss – Resume</title>
 	<link rel="stylesheet" href="index.css">
-	<meta name="author" content="Matt Mohandiss">
-	<title> Matt Mohandiss Resume </title>
 </head>
 
 <body>
-	<header>
-		<h1> Matt Mohandiss </h1>
-		<div>
-			<span>🌎 Durham, NC</span>
+	<header class="header">
+		<h1 class="name">Matt Mohandiss</h1>
+		<p class="headline">Software Engineer — Evaluation Platforms & Cloud Infrastructure</p>
+
+		<p class="meta">
+			<span>🌍 Copenhagen, DK</span>
 			<span>✉️ mattmohandiss@gmail.com</span>
-			<span>📞 678-767-2886</span>
-		</div>
+			<span>📞 +45 22 40 12 98</span>
+		</p>
+		<p class="meta auth">
+			Work authorization: United States (Citizen); Denmark (Student Visa)
+		</p>
 	</header>
-	<main>
-		<section>
-			<h2>EXPERIENCE</h2>
-			<article>
-				<h3>
-					<span>DevOps Engineer, SAS</span>
-					<span> Jun 2022 - Present</span>
-				</h3>
-				<ul>
-					<li>Migrating on-premises infrastructure to Microsoft Azure, leveraging a declarative
-						configuration-as-code approach, resulting in 70% faster deployments and increased scalability.
-					</li>
-					<li>Optimizing security and performance for a multi-tenant web application with 500,000
-						users by implementing vulnerability scanning and debugging critical incidents ensuring 99.999%
-						uptime.</li>
-					<li>Leading the development of functional testing suites using schema-driven design to maintain
-						100% code coverage, improve CI/CD integration, and meet accessibility standards.</li>
-					<li>Managing data storage solutions for 14 statewide clients in a NIST-compliant cloud environment,
-						optimizing ETL processes for 2x faster data ingress, and strengthening security protocols.</li>
-				</ul>
-			</article>
 
-			<article>
-				<h3>
-					<span>Software Engineer, Virginia Systems and Technology</span>
-					<span> Jan 2019 - Aug 2020</span>
-				</h3>
-				<ul>
-					<li>Developed geospatial tracking applications in React for national defense agencies, enhancing
-						real-time threat detection and situational awareness for analysts.</li>
-					<li>Improved live data ingestion pipelines by optimizing Elasticsearch preprocessing and reducing
-						data refresh times by 50ms using data caching, improving system responsiveness and
-						availability.</li>
-					<li>Implemented LSTM neural networks in Python and C++ to detect anomalies in time-series data,
-						reducing detection errors by 20% and improving system accuracy.</li>
-				</ul>
-			</article>
+	<main class="page">
 
-			<article>
-				<h3>
-					<span>Software Developer Intern, Cobb County School District</span>
-					<span> Aug 2016 - Dec 2016</span>
-				</h3>
-				<ul>
-					<li>Designed and implemented a web-based system to streamline content management for 7,500
-						educators, reducing update times by 90% in 110 schools.</li>
-					<li>Created a mobile behavior-tracking app in Swift and Java for special education teachers,
-						resulting in a 40% increase in logged behaviors due to more efficient reporting.</li>
-				</ul>
-			</article>
+		<section class="section">
+			<h2>PROFILE</h2>
+			<p class="summary">
+				Software Engineer with 3+ years of experience building fast, reliable, and well-architected
+				backend systems. Strong background in cloud infrastructure, data pipelines, and developer
+				tooling, with a focus on automated evaluation, regression detection, and system correctness.
+				Currently pursuing an MS in Computer Science at the University of Copenhagen, with interests
+				in human–computer interaction, machine learning, and evaluating human-AI systems.
+			</p>
 		</section>
 
-		<section>
-			<h2>EDUCATION</h2>
-			<article>
-				<h3>
-					<span>BS Computer Science, University of Tennessee</span>
-					<span> Aug 2017 - May 2022</span>
-				</h3>
-				<ul>
-					<li>Double minored in Cybersecurity and Business Administration.</li>
-					<li>Won the campus hackathon and awarded honorable mention in the campus startup competition. </li>
-					<li>Worked as a student ambassador, preparing students for interviews and representing the
-						university to over 150 employers.</li>
-				</ul>
-			</article>
-		</section>
-
-		<section>
+		<section class="section">
 			<h2>SKILLS</h2>
+			<ul class="skills">
+				<li><b>Evaluation & Experimentation:</b> automated eval frameworks, regression analysis, confidence intervals,
+					failure analysis</li>
+				<li><b>Backend & Data:</b> Python, Go, Java, PostgreSQL, Elasticsearch, message queues</li>
+				<li><b>Cloud & Platform:</b> Azure, Kubernetes, Terraform, Docker, Helm</li>
+				<li><b>CI/CD & Dev Tooling:</b> GitHub Actions, release automation, commit-based quality gates</li>
+				<li><b>Observability & Reliability:</b> Prometheus, Grafana, SLIs/SLOs, incident response</li>
+				<li><b>Frontend & UX:</b> TypeScript, React, internal dashboards</li>
+				<li><b>Security:</b> IAM/RBAC, Azure Key Vault, NIST SP 800-53</li>
+				<li><b>Automation & OS:</b> Bash, PowerShell, Nix, Linux</li>
+				<li><b>ML Systems:</b> model evaluation, anomaly detection, TensorFlow, LSTM</li>
+			</ul>
+		</section>
+
+		<section class="section">
+			<h2>EXPERIENCE</h2>
+
 			<article>
+				<h3>
+					<span class="role">DevOps Engineer — SAS</span>
+					<span class="dates">Jun 2022 – Aug 2025</span>
+				</h3>
 				<ul>
-					<li><b>Languages:</b> Python, TypeScript, Java, Dart, Lua, C++, Go</li>
-					<li><b>Tools:</b> React, Spring, Docker, Elasticsearch, Terraform, TensorFlow, Playwright, Git</li>
-					<li><b>Platforms:</b> Microsoft Azure, Google Cloud, Windows, Linux, Web</li>
+					<li>
+						Owned the migration from on-prem infrastructure to Microsoft Azure using infrastructure-as-code
+						(Terraform, Helm), reducing deployment times by 70% and enabling rapid iteration across teams.
+					</li>
+					<li>
+						Built and operated Kubernetes-based, multi-tenant platforms supporting 500,000+ users, maintaining
+						99.999% uptime through robust observability, alerting, and on-call incident response.
+					</li>
+					<li>
+						Designed and implemented automated evaluation frameworks integrated into CI/CD pipelines,
+						enabling fast detection of regressions, systematic comparison of system behavior across releases,
+						and higher-confidence deployments.
+					</li>
+					<li>
+						Developed schema-driven test and evaluation systems that allowed engineers to easily add new
+						scenarios, run evals locally or in CI, and drill into failures affecting real user workflows.
+					</li>
+					<li>
+						Owned data pipelines backed by PostgreSQL, message queues, and Elasticsearch for 14 clients,
+						doubling ingestion throughput while improving correctness guarantees and operational reliability.
+					</li>
+					<li>
+						Designed secure cloud environments using RBAC, IAM, and Azure Key Vault, implementing NIST SP 800-53
+						controls for public-sector clients.
+					</li>
+				</ul>
+			</article>
+
+			<article>
+				<h3>
+					<span class="role">Software Engineer — Virginia Systems &amp; Technology</span>
+					<span class="dates">Jan 2019 – Aug 2020</span>
+				</h3>
+				<ul>
+					<li>
+						Built geospatial web applications in React for public-sector clients, improving real-time
+						situational awareness and analyst decision-making.
+					</li>
+					<li>
+						Optimized live data ingestion pipelines using Elasticsearch preprocessing and caching,
+						reducing refresh latency by 50 ms.
+					</li>
+					<li>
+						Implemented LSTM-based anomaly detection systems in Python and C++ for time-series data,
+						including evaluation of false positives/negatives and threshold calibration, reducing
+						detection errors by 20%.
+					</li>
+				</ul>
+			</article>
+
+			<article>
+				<h3>
+					<span class="role">Software Developer Intern — Cobb County School District</span>
+					<span class="dates">Aug 2016 – Dec 2016</span>
+				</h3>
+				<ul>
+					<li>
+						Designed and built a web-based content management system used by 7,500 educators across
+						110 schools, reducing update time by 90%.
+					</li>
+					<li>
+						Developed a mobile behavior-tracking app in Swift and Java for special education teachers,
+						increasing logged reports by 40%.
+					</li>
 				</ul>
 			</article>
 		</section>
+
+		<section class="section">
+			<h2>EDUCATION</h2>
+
+			<article>
+				<h3>
+					<span class="role">MS Computer Science — University of Copenhagen</span>
+					<span class="dates">Aug 2025 – Present</span>
+				</h3>
+				<ul>
+					<li>Focus areas: Human-Computer Interaction, Machine Learning, evaluation of human–AI systems</li>
+					<li>Active in the KU Lighthouse startup ecosystem</li>
+				</ul>
+			</article>
+
+			<article>
+				<h3>
+					<span class="role">BS Computer Science — University of Tennessee</span>
+					<span class="dates">Aug 2017 – May 2022</span>
+				</h3>
+				<ul>
+					<li>Double minor in Cybersecurity and Business Administration</li>
+					<li>Hackathon winner and startup competition honorable mention</li>
+					<li>Student ambassador supporting interview preparation and representing the university to 150+ employers</li>
+				</ul>
+			</article>
+		</section>
+
 	</main>
 </body>
 
