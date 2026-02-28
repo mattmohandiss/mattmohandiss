@@ -3,7 +3,7 @@ Software Engineer — Evaluation Platforms · Cloud Infrastructure · Human–AI
 
 Copenhagen, Denmark 🇩🇰  
 
-![Language Stats](stats/pie_by_weighted.png)
+<img src="stats/donut_by_weighted.png" alt="Language Stats" width="600" />
 
 ---
 
