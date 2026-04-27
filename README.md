@@ -1,12 +1,3 @@
-# Matt Mohandiss  
-Software Engineer — Evaluation Platforms · Cloud Infrastructure · Human–AI Systems
-
-Copenhagen, Denmark 🇩🇰
-
-I build reliable backend systems and automated evaluation platforms for complex software.
-
----
-
 ### 🧑🏽 About Me
 
 <img align="right" src="stats/donut_by_weighted.png" alt="Language Stats" width="50%" />
